@@ -29,15 +29,6 @@ const BookDescription = () => {
           <button className="btn">
             <Link to="/addbook">Add</Link>
           </button>
-          <button className="btn">
-            <Link to="/Register">Register</Link>
-          </button>
-          <button className="btn">
-            <Link to="/">Log In</Link>
-          </button>
-          <button className="btn">
-            <Link to="/logout">Log Out</Link>
-          </button>
         </div>
       </div>
       <div>

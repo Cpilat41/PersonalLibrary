@@ -6,7 +6,6 @@ let owl = require("../images/owl1.png");
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [username, setUsername] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const navigate = useNavigate();
 
@@ -16,7 +15,6 @@ const Login = () => {
       .post(
         `http://localhost:8000/api/users/login`,
         { 
-          // username: username,
           email: email,
           password: password,
         },
@@ -39,15 +37,7 @@ const Login = () => {
     <div>
       <div className="secondaryheader">
         <h1>Grab a cup of tea and find your next book!</h1>
-        <div>
-          <button className="btn">
-            <Link to="/Home">Home</Link>
-          </button>
-          <button className="btn">
-            <Link to="/addbook">Add</Link>
-          </button>
-        </div>
-      </div>
+       </div>
       <div>
         <img src={owl} className="owl" alt="owl" />
       </div>
@@ -63,7 +53,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <p>{errMsg ? errMsg : ""}</p>
+        <p className="error">{errMsg ? errMsg : ""}</p>
         <div className="login">
           <label>Password: </label>
           <br></br>
@@ -74,8 +64,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <p className="error">{errMsg ? errMsg : ""}</p>
         <input type="submit" className="loginbtn" value="Log In" />
-        <h2>Not Registered Yet?</h2>
+        <h3>Not Registered Yet?</h3>
         <button className="loginbtn">
           <Link to="/register">Register here!</Link>
         </button>

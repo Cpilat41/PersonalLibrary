@@ -35,7 +35,7 @@ const AddBookForm = () => {
           bestRead,
         },
         {
-          withCredentials: true
+          withCredentials: true,
         }
       )
       .then((res) => {
@@ -62,15 +62,6 @@ const AddBookForm = () => {
             <button className="btn">
               <Link to="/addbook">Add</Link>
             </button>
-            <button className="btn">
-              <Link to="/Register">Register</Link>
-            </button>
-            <button className="btn">
-              <Link to="/">Log In</Link>
-            </button>
-            <button className="btn">
-              <Link to="/logout">Log Out</Link>
-            </button>
           </div>
         </div>
         <form onSubmit={onSubmitHandler} className="form">
@@ -86,7 +77,7 @@ const AddBookForm = () => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
-              {/* {errors.title ? <p>{errors.title.message}</p> : null} */}
+              {errors.title ? <p>{errors.title.message}</p> : null}
               <br></br>
               <label>By: </label>
               <br></br>
@@ -97,7 +88,7 @@ const AddBookForm = () => {
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
               />
-              {/* {errors.author ? <p>{errors.author.message}</p> : null} */}
+              {errors.author ? <p>{errors.author.message}</p> : null}
               <br></br>
               <label>Description: </label>
               <br></br>
@@ -109,7 +100,7 @@ const AddBookForm = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
-              {/* {errors.description ? <p>{errors.description.message}</p> : null} */}
+              {errors.description ? <p>{errors.description.message}</p> : null}
               <br></br>
             </div>
             <div className="right-col">
@@ -150,8 +141,8 @@ const AddBookForm = () => {
                   <option value="When it's cold">When it's Cold</option>
                   <option value="Spooky Season">Spooky Season</option>
                   <option value="On a Rainy Day">On a Rainy Day</option>
-                  <option value="By a fireplace">By a fireplace</option>
-                  <option value="On a picnic">On a picnic</option>
+                  <option value="By a fireplace">By a Fireplace</option>
+                  <option value="On a picnic">On a Picnic</option>
                 </select>
                 {""} <br></br>
               </div>

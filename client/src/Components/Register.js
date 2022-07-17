@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 let owl = require("../images/owl1.png");
 
 const Register = () => {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [errMsg, setErrMsg] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
+  const [errMsg, setErrMsg] = useState("");
   const [confirmReg, setConfirmReg] = useState("");
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const Register = () => {
         });
         setConfirmReg("You are now registered! Now you can log in!");
         setErrors({});
-        navigate("/login");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -56,7 +56,7 @@ const Register = () => {
             <Link to="/Home">Home</Link>
           </button>
           <button className="btn">
-            <Link to="/login">Log in</Link>
+            <Link to="/">Log in</Link>
           </button>
         </div>
       </div>
@@ -77,6 +77,9 @@ const Register = () => {
               onChange={(e) => onSubmitHandler(e)}
             />
           </div>
+          {errors.username ? (
+            <p className="error"> {errors.username.message}</p>
+          ) : null}
           <div>
             <label>Email:</label>
             <br></br>
@@ -87,6 +90,9 @@ const Register = () => {
               onChange={(e) => onSubmitHandler(e)}
             />
           </div>
+          {errors.email ? (
+            <p className="error"> {errors.email.message}</p>
+          ) : null}
           <div>
             <label>Password:</label>
             <br></br>
@@ -97,6 +103,9 @@ const Register = () => {
               onChange={(e) => onSubmitHandler(e)}
             />
           </div>
+          {errors.password ? (
+            <p className="error"> {errors.password.message}</p>
+          ) : null}
           <div>
             <label>Confirm Password:</label>
             <br></br>
@@ -107,9 +116,14 @@ const Register = () => {
               onChange={(e) => onSubmitHandler(e)}
             />
           </div>
+          {errors.confirmPassword ? (
+            <p className="error"> {errors.confirmPassword.message}</p>
+          ) : null}
           <button className="regbtn">Register Now!</button>
           <h2>Already Registered?</h2>
-          <button className="regbtn"><Link to="/">Log In Here!</Link></button>
+          <button className="regbtn">
+            <Link to="/">Log In Here!</Link>
+          </button>
         </form>
       </div>
     </div>

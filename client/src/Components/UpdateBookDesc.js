@@ -57,11 +57,9 @@ const UpdateBookDesc = (prop) => {
             <Link to="/home">Home</Link>
           </button>
           <button className="btn">
-            <Link to="/addbook">Add Book</Link>
+            <Link to="/addbook">Add</Link>
           </button>
-          <button className="btn">
-            <Link to="/logout">Log Out</Link>
-          </button>
+
         </div>
       </div>
       <div>
