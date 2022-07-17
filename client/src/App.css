@@ -148,7 +148,7 @@ th {
   box-shadow: 0px 5px 10px black;
   border: 1px solid black;
   cursor: pointer;
-  color: #ffffff;
+  color: black;
   border-radius: 10px;
   margin: 3px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -168,19 +168,21 @@ th {
   width: 100%;
   box-sizing: border-box;
 }
-.input {
+.input
+ {
   border: 3px solid black;
   padding: 20px;
 }
 
-.textareadesc {
+.textareadesc,
+textarea {
   width: 50%;
-  height: 25%
+  height: 25%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* Register */
 .reg-row, .loginform {
-  font-family: "Cormorant SC", serif;
-  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   padding: 20px;
   background-color: #4CACBC;
@@ -280,5 +282,11 @@ Addbookbtn, regbtn, updatedbook {
   cursor: pointer;
   animation-name: bounce;
   animation-timing-function: ease-in-out;
+}
+
+.error {
+  font-family: monospace;
+  color: #BD2A2A;
+  font-weight: bold;
 }
 

@@ -14,7 +14,7 @@ const BookshelfSchema = new mongoose.Schema(
     description: {
       type: String,
       required: [true, "Title is requried"],
-      maxlength: [100, "No way, cannot be more than 100 Characters"],
+      maxlength: [100, "Cannot be more than 100 Characters"],
     },
     favoriteQuote: {
       type: String,
@@ -34,7 +34,7 @@ const BookshelfSchema = new mongoose.Schema(
         "On a Rainy Day",
         "By a fireplace",
         "Under the covers",
-        "On a picnic",
+        "On a Picnic",
       ],
       required: [
         true,
