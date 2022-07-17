@@ -92,11 +92,10 @@ const AddBookForm = () => {
               <br></br>
               <label>Description: </label>
               <br></br>
-              <input
+              <textarea
                 placeholder="Short Description..."
                 className="textareadesc"
                 name="description"
-                type="text"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />

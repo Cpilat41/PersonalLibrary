@@ -168,14 +168,17 @@ th {
   width: 100%;
   box-sizing: border-box;
 }
-.input {
+.input
+ {
   border: 3px solid black;
   padding: 20px;
 }
 
-.textareadesc {
+.textareadesc,
+textarea {
   width: 50%;
-  height: 25%
+  height: 25%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* Register */
 .reg-row, .loginform {
